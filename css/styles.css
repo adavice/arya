@@ -291,11 +291,14 @@ text-transform: none;
 }
 
 .how .iconbox{
-	min-height: 140px!important;
+	min-height: 100px!important;
     background-color: #eff3f68f;
     margin-right: 20px;
     border-radius: 10px;
     padding: 10px 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 .how >h2{
 	text-align: center!important;
@@ -329,8 +332,11 @@ text-transform: none;
 
 }
 
-.iconbox h1{
-	color: var(--highlight);
+.iconbox h2{
+	background-color: var(--highlight);
+    color: #f6f8fa;
+    padding: 10px;
+    border-radius: 5px;
 }
 .iconbox img {
 	display: block;
