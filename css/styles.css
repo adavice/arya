@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Coda:wght@800&family=Work+Sans:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root{
 --main-color: #292930;
@@ -48,7 +48,7 @@ h3 {
 	font-weight: 700;
 }
 h1,h2, h3 {
-	font-family: 'Work Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 800;
 
 }
@@ -67,6 +67,7 @@ h1,h2, h3 {
 
 section.third_block.darker > div{
 	display: flex;
+	flex-direction: row-reverse;
 }
 
 header {
@@ -96,10 +97,10 @@ header .wrapper {
 	font-weight: 600;
 	text-align: center;
 	display: block;
-	background: var(--highlight-grad);
+	background: var(--highlight);
 	color: #fff;
-	border-radius: 25px;
-	box-shadow: 0 15px 20px -10px var(--highlight);
+	border-radius: 10px;/*
+	box-shadow: 0 15px 20px -10px var(--highlight);*/
 	padding: 12px 0;
 	width: 250px;
 	/* height: 42px; */
@@ -108,6 +109,7 @@ header .wrapper {
 	margin-top: 30px;
 	transition: box-shadow 0.5s;
 	cursor: pointer;
+	text-transform: capitalize;
 }
 
 .button:hover {
@@ -233,10 +235,10 @@ a {
 }
 .hero {
 	width: 100%;
-	height: calc(100vh - 170px);
+	height: fit-content;
 }
 .main .hero {
-	background: linear-gradient(to right, var(--main-color), #00000080), url(../img/herobanner.jpg);
+	background: linear-gradient(to bottom, #29293096, #00000080), url(../img/hero-img.png);
 	background-size: cover;
 	background-position: center;
 	display: block;
@@ -244,6 +246,7 @@ a {
 .hero .wrapper {
 	display: flex;
 	height: 100%;
+	padding: 100px 0;
 
 }
 
@@ -258,24 +261,44 @@ a {
 .hero h1 {
 	margin: auto;
 	max-width: 720px;
+	color: white;
 }
 
 .hero h3 {
 	margin-top: 20px;
 color: #fff;
+font-size: 20px;
+font-weight: 500;
+text-transform: none;
 }
 .iconsection {
 	display: flex;
 	height: min-content;
+	align-items: center;
 }
 .iconsection span {
-	margin-left: auto;
-    margin-right: auto;
+	/*margin-left: auto;
+    margin-right: auto;*/
     white-space: normal;
 }
 .howWorks > .iconsection {
 	/*margin-top: 100px;*/
 	/*margin-bottom: 70px;*/
+}
+
+.howWorks h2{
+	text-align: left;
+}
+
+.how .iconbox{
+	min-height: 140px!important;
+    background-color: #eff3f68f;
+    margin-right: 20px;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+.how >h2{
+	text-align: center!important;
 }
 .iconbox {
 	position: relative;
@@ -283,8 +306,11 @@ color: #fff;
 	padding: 0 20px;
 	text-align: center;
 	width: 25%;
-	display: inline-block;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 	white-space: nowrap;
+	gap: 15px;
 	float: left;
 	height: min-content;
 	margin: 50px 0 70px;
@@ -292,15 +318,19 @@ color: #fff;
 }
 .main .iconbox {
 	width: 33%;
+	min-height: 200px;
 }
 
 .iconbox span {
 	display: block;
-	margin-bottom: 15px;
 	font-weight: 700;
 	font-size: 19px;
+	text-align: left;
 
+}
 
+.iconbox h1{
+	color: var(--highlight);
 }
 .iconbox img {
 	display: block;
@@ -310,9 +340,13 @@ color: #fff;
 .iconbox svg {
 	fill: var(--highlight);
 	display: block;
-	margin: 20px auto;
-	height: 92px;
+	padding: 15px;
+	border-radius: 10px;
+	height: 35px;
 	width: auto;
+
+	background-color: #eff3f68f;
+
 }
 
 
@@ -350,8 +384,8 @@ h2.center.dark {
 .iconbox p {
 	white-space: normal;
     text-align: left;
-	width: fit-content;
-	margin: auto;
+	width: fit-content;/*
+	margin: auto;*/
 }
 .iconbox ul {
 	margin: auto;
@@ -365,24 +399,26 @@ li::marker{
 
 .third_block .img {
 	display: inline-block;
-	margin-left: -27%;
+	/*margin-left: -27%;*/
     top: 0;
-    width: 90%;
-    background: url(../img/23_image.jpg) no-repeat;
+    width: 50%;
+    background: url(../img/desk-img1.jpg) no-repeat;
+	background-position: left;
     background-size: cover;
-	min-height: 600px;
 
+	border-radius: 10px;
 }
 .halfblock .img {
 
     display: inline-block;
-    position: absolute;
+    position: initial;
     right: 0%;
     width: 50%;
     background: url(../img/half_image.jpg);
     background-size: cover;
     min-height: 600px;
 
+	border-radius: 10px;
 }
 .halfblock img {
 	height: 100%;
@@ -394,7 +430,7 @@ li::marker{
 .halfblock h2 {
 	margin-bottom: 30px;
 	color: transparent;
-	background: var(--highlight-grad);
+	background: var(--highlight);
 	-webkit-background-clip: text;
 
 }
@@ -423,8 +459,10 @@ form {
 }
 .third_block .column {
 	max-width: 720px;
-    padding: 0 30px;
+	border-radius: 10px 0 0 10px;
+    padding: 40px 30px;
     margin: 70px 0;
+	background-color: #eff3f68f;
 }
 
 .column .column-list{
@@ -570,8 +608,6 @@ footer a:visited {
 }
 .iconsection.dark .iconbox span {
 	max-width: 200px;
-    margin-left: auto;
-    margin-right: auto;
     white-space: normal;
 }
 
@@ -630,8 +666,8 @@ footer a:visited {
     text-align: center;
 }
 .darker {
-	background: var(--main-color);
-	color: #fff;
+	background: white;
+	color: #000;
 }
 
 .halfblock.right h2 {
@@ -639,7 +675,7 @@ footer a:visited {
 }
 .darker h3 {
 	color: transparent;
-	background: var(--highlight-grad);
+	background: var(--highlight);
 	-webkit-background-clip: text;
 	margin-bottom: 30px;
 }
@@ -719,8 +755,9 @@ body.contact > section:nth-child(5) {
 	text-align: center;
     width: 350px;
     height: 42px;
-    border-radius: 250px;
-    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    border: 0px solid var(--main-color);
+	background-color: #eff3f68f;
     padding: 10px 20px;
     margin-bottom: 15px;
     text-align: left;
@@ -728,7 +765,7 @@ body.contact > section:nth-child(5) {
 .halfblock form >textarea {
     resize: none;
     box-sizing: border-box;
-    border-radius: 20px;
+    border-radius: 5px;
     height: 100px;
 }
 .contact .halfblock form >input::placeholder {
