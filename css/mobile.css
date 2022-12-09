@@ -231,8 +231,10 @@
 
 
     .iconbox:nth-child(4) {
-        margin-bottom: 70px;
+       /* margin-bottom: 70px;*/
     }
+
+    
 
     .howWorks > div > div:nth-child(4) {
         margin-bottom: 0;
@@ -248,9 +250,9 @@
     }
 
     .third_block {
-        background: linear-gradient(0deg, #000000c7, #000000c7), url(../img/23_image.jpg) no-repeat;
+        background: #eff3f68f ;
         background-size: cover;
-        color: #fff;
+        /*color: #fff;*/
         min-height: 630px;
     }
 
@@ -293,8 +295,17 @@
         background-position: right;
     }
 
+    .main .halfblock{
+        background: #fff;
+    }
+
     .halfblock .wrapper {
         height: 100vh;
+    }
+
+    .about .halfblock .wrapper {
+        height: fit-content;
+        min-height: unset;
     }
 
     .halfblock form {
@@ -351,11 +362,13 @@
     /*ABOUT==============================*/
     .about .hero {
         display: block;
+        min-height: 750px;
+        padding-top: 0;
     }
 
 
     .iconsection.dark .iconbox {
-        width: 50% !important;
+        width: 100% !important;
     }
 
     .iconsection.dark .iconbox span {
@@ -377,6 +390,7 @@
 
     .about .iconbox {
         margin-top: 30px;
+        max-width: 300px;
     }
 
     .iconsection.leaders {
@@ -475,9 +489,13 @@
         display: inline-block;
         white-space: nowrap;
         width: 100%;
-        padding: 0px 30px 0px;
+        padding: 30px;
         margin: 60px 0px;
         position: relative;
+    }
+
+    .ppc .iconsection.dark .iconbox{
+        width: 50%!important;
     }
 
     .price_box .button {
@@ -531,14 +549,14 @@
 
     .contact .halfblock, .ppc .halfblock {
         height: 100vh;
-        background: linear-gradient(0deg, #292929cc, #292929cc), url(../img/contact_hero.jpg) no-repeat;
+        background: #fff;
         background-size: cover;
         background-position: center;
         color: var(--main-color);
     }
 
     .contact .halfblock {
-        background: var(--main-color);
+        background: #fff;
     }
 
     .contact .halfblock form {
@@ -634,13 +652,16 @@
 
     .services .hero .about_text {
         color: #fff;
-        margin-left: unset;
+        margin-left: 20px;
         padding-left: unset;
         width: unset;
         text-align: left;
         height: auto;
     }
 
+    .services .button_block p{
+        margin: 20px;
+    }
     .services .halfblock .half_info {
         width: 100%;
         margin: auto 0;
@@ -668,6 +689,7 @@
 
     .services .halfblock .wrapper {
         padding: 0 20px 0 0;
+        flex-direction: row;
     }
 
     .thx {
@@ -684,7 +706,18 @@
     }
 
     .about .halfblock form h2 {
-        color: #fff;
+        /*color: #fff;*/
+    }
+
+    .about .halfblock{
+        min-height: unset;
+        height: fit-content;
+    }
+
+    .about .halfblock form{
+        margin: auto;
+        margin-top: 0;
+        margin-bottom: 50px;
     }
 
 
